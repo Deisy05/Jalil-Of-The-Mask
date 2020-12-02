@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JALIL OF THE MASK</title>
+    <link href="images/logoPag.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Piedra&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1 id="title" class="title">Jalil Of The Mask</h1>
+    <center>
+      <img id="game-over-image" style="display:none" class="game-over-image" src="./images/gameOver.jpg" alt="">
+      <img id="win-image" style="display:none" class="win-image" src="./images/win.jpg" alt="">
+      <canvas id="canvas" width="300" height="300"></canvas>
+    </center>
+    <script>
+      if (id="puntaje"==250) {
+      }
+</script>
+    <script src="js/functional-light.js"></script>
+    <script src="js/processing.js"></script>
+    <script src="js/fl-extended.js"></script>
+    <script src="JalilGame.js"></script>
+
+    <center><audio src="audio/fondoDeJuego.mpeg" autoplay="true" loop="true"></audio></center>
+    
+    
+  <div class="menu">
+    <img src="images/logoPag.png" title="Logo" width="160"/>
+    <div class= "descrip">
+      <p style="color:white;"><span id="puntaje"></span></p> <!-- Puntos que lleva -->
+      <p style="color:white;"><span id="restantes"></span></p><!-- Puntos que necesita para ganar -->
+      <p style="color:white;"><span id="vidas"></span></p><!-- Puntos que necesita para ganar -->
+    </div>
+    <button id= "reini" onclick="location.href='index.html'" class="button">Reiniciar</button>
+  </div>
+
+  </body>
+</html> 
+

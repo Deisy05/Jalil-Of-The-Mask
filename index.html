@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>JALIL OF THE MASK</title>
+    <link href="images/logoPag.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Piedra&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+
+
+  <body>
+
+  <br><br><br><br>
+  <center>
+    <h1 style="color:white;"><FONT SIZE=50>Jalil Of The Mask</font></h1>
+    <img src="images/logoPag.png" title="Logo" width="160"/>
+    <br><br>
+    <button onclick="location.href='juego.html'" class="button" >Jugar</button>
+    <br><br>
+    
+<!-- Contenedor para el Modal de instrucciones -->
+  <div class="w3-container">
+  
+    <button onclick="document.getElementById('id01').style.display='block'" class="button">Instrucciones</button><!-- Botón Intrucciones que abre el modal -->
+    <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom"><!-- Hace que aparezca el contenido del modal con una animación de zoom -->
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+
+        <center><h1 style="color:black;"><FONT SIZE=50>Manual Previo de Usuario</font></h1></center>
+      
+        
+
+      <p style="color:black;" class="font-weight-light">Usa las siguientes teclas para mover a Jalil.
+      <br/>
+       Ten en cuenta los items dados.
+      </p>
+      <br/>
+      <img src="images/teclas.png" alt="Flechas de Teclado" title="Teclas de Juego" width="200"/>
+      <br/><br/>
+      
+
+      <div class="w3-container">
+  <h2>Lista de items</h2>
+  <p></p> 
+  <ul class="w3-ul w3-card-4">
+    
+    <li class="w3-bar">
+      <img src="images/jalil.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">JALIL</span><br>
+        <span>Un jugador valiente, aventurero y explorador</span>
+      </div>
+    </li>
+    
+    <li class="w3-bar">
+      <img src="images/mone.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Moneda</span><br>
+        <span>Te da 1 punto, necesitarás todas para ganar</span>
+      </div>
+    </li>
+
+    <li class="w3-bar">
+      <img src="images/billete.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Super Billete</span><br>
+        <span>Te da 10 puntos, ademas hace bajar la lava</span>
+      </div>
+    </li>
+
+    <li class="w3-bar">
+      <img src="images/cora.png" width="60px" class="w3-bar-item w3-square w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Corazón</span><br>
+        <span>Te suma 1 vida, agarralos todos, ¡Te servirán!</span>
+      </div>
+    </li>
+
+    <li class="w3-bar">
+      <img src="images/LAVA.jpg" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+      <div class="w3-bar-item">
+        <span class="w3-large">Lava</span><br>
+        <span>Te quita 1 vida, no permitas que te alcance</span>
+      </div>
+    </li>
+
+  </ul>
+</div>
+      </br>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Cierre del Modal de instrucciones -->
+
+<br>
+
+<!-- Inicio del modal de Historia -->
+<div class="w3-container">
+  
+    <button onclick="document.getElementById('id02').style.display='block'" class="button">Historia</button><!-- Botón Intrucciones que abre el modal -->
+    <div id="id02" class="w3-modal">
+    <div class="w3-modal-content w3-animate-zoom"><!-- Hace que aparezca el contenido del modal con una animación de zoom -->
+      <div class="w3-container">
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+
+        <center><h1 style="color:black;"><FONT SIZE=50>Jalil Of The Mask </font></h1></center>
+        <p style="color:black">Jalil es un valiente aventurero, que en medio de un bosque encontró una mascara de oro dentro de un castillo misterioso. Persuadido por su curiosidad terminó poniendose la mascara y luego no se la pudo quitar. De un momento a otro el castillo se empieza a desmoronar y a salir lava por los pasillos. Jalil, dominado por su avaricia, la cual es un efecto de la mascara, toma el riesgo de recojer todas las monedas de oro antes de ser alcanzado por la lava.  </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- cierre del modal de Historia -->
+
+
+    <audio src="audio/fondo.mpeg" autoplay="true" loop="true"></audio>
+  </center>
+  </body>
+</html> 
