@@ -70,7 +70,7 @@ function sketchProc(processing) {
     };
   };
 
-// Dibuja algo en el canvas. 
+//Propósito: Dibujar algo en el canvas. 
 processing.drawGame = function (world) {
   processing.background(0, 0, 0);
 
@@ -81,8 +81,7 @@ processing.drawGame = function (world) {
       recursiveList(rest(l), f, index + 1)
     }
   }
-  
-  
+  //dibuja el mapa
   recursiveList(world.mapa, (row, i) => {
     recursiveList(row, (cell, j) => {
       if (cell == 1) {//es para los muros del laberinto
@@ -104,16 +103,21 @@ processing.drawGame = function (world) {
     });
   });
 
-
+  //dibuja al pj
   if (world.time == 0)
     processing.image(tomb, world.tomb.x * SIZE, world.tomb.y * SIZE, SIZE, SIZE);
+  
   else
     processing.image(tomb, world.tomb.x * SIZE, world.tomb.y * SIZE, SIZE, SIZE);
+    //dibuja la lava
     processing.image(lava, world.lava.x * SIZE, world.lava.y * SIZE, SIZE * WIDTH, SIZE * HEIGHT);
 }
 
 
-// Propósito: Función que funciona como (Make world, make tomb, etc)
+/* 
+*Propósito: Generar un mundo
+*funciona como (Make world, make tomb, etc)
+*/
 function make(data, attribute) {
   return Object.assign({}, data, attribute);
 }
@@ -121,7 +125,8 @@ function make(data, attribute) {
 
 
 
-//Propósito: Funcion que actualiza la lava
+//Propósito: Actualizar la lava
+
 function updateLava(world) {
   if (world.lava.y > 0) {
     world.lava.y -= SIZE / 2500; //Se demora más en subir la lava mientras mas grande sea el numero.
@@ -129,7 +134,7 @@ function updateLava(world) {
 }
 
 
- //Propósito: Funcion que actualiza las vidas
+ //Propósito: Actualizar las vidas
 function updateVidas(world) {
   if (world.tomb.vidas <= 0 && world.tomb.alive==true) {
     world.tomb.alive = false; //Mata a tomb si las vidas bajan a 0.
@@ -137,7 +142,7 @@ function updateVidas(world) {
 }
 
 
-//Propósito: Funcion que hace colision con la lava (ácido)
+//Propósito: Funcion que hace colision con la lava
 function colisionLava(world) {
   if (world.lava.y < (world.tomb.y + 0.95) && world.tomb.vidas>=2) {
     world.tomb.vidas = world.tomb.vidas-1;
@@ -252,7 +257,7 @@ function updateTomb(world) {
 
 
 
-// Actualiza el mundo despues de cada frame. En este ejemplo, no cambia nada, solo retorna una copia del mundo
+// Actualiza el mundo despues de cada frame.
 processing.onTic = function (world) {
 if (world.tomb.alive && world.puntaje<250 && world.tomb.x == 11 && world.tomb.y == 14) {//Solo funciona si tomb está vivo y tiene menos de 200 puntos (o meta para ganar)
     updateTomb(world);
@@ -306,7 +311,7 @@ if (world.tomb.alive && world.puntaje<250 && world.tomb.x == 11 && world.tomb.y 
 }
 
 
-//Implemente esta función si quiere que su programa reaccione a eventos del teclado
+// Reaccionar a eventos del teclado
 processing.onKeyEvent = function (world, keycode) {
   //keycode
   const tolerancia = (SIZE / 144) * 2.1;
