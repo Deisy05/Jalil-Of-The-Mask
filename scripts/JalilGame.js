@@ -288,9 +288,6 @@ if (world.tomb.alive && world.puntaje<250 && world.tomb.x == 11 && world.tomb.y 
     var puntajeTexto = document.getElementById("puntaje");
     puntajeTexto.innerText = "Felicitaciones, ¡Ganaste!";
 
-    const winImage = document.getElementById("win-image")
-    winImage.style.display = "inline";
-
     var puntosRestantes = document.getElementById("restantes");
     puntosRestantes.innerText = "Puntos: "+ world.puntaje;
     
